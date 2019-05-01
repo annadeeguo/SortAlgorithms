@@ -1,0 +1,28 @@
+public class Sort {
+	
+	public static void InsertionSort(int[] a, int n) {
+		int current, preIndex;
+		
+		for (int i = 0; i < n-1; i++) {
+			preIndex = i ;
+			current = a[i+1];
+			while (preIndex >= 0 && a[preIndex] > current) {	
+				a[preIndex+1] = a[preIndex]; //move data forward
+				preIndex--;
+			}
+			a[preIndex+1] = current;
+		}
+	}
+  public static void main(String[] args) {
+		
+		int[] arr = {1,1,2,0,9,3,12,7,8,3,4,65,22,2};
+		
+		InsertionSort(arr, arr.length);
+		
+	    for(int i:arr){
+	        System.out.print(i+",");
+	    }
+
+	}
+
+}
